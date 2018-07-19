@@ -15,7 +15,7 @@ import com.qa.domain.Trainee;
 
 import com.qa.utils.*;
 
-public class AccountDBRepository implements AccountRepository {
+public class TraineeDBRepository implements TraineeRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
 	

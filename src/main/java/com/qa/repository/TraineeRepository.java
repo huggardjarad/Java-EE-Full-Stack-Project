@@ -1,6 +1,6 @@
 package com.qa.repository;
 
-public interface AccountRepository {
+public interface TraineeRepository {
 
 	public String findAllTrainees();
 	
