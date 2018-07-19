@@ -15,6 +15,8 @@ import com.qa.domain.Trainee;
 
 import com.qa.utils.*;
 
+import constants.Constants;
+
 public class TraineeDBRepository implements TraineeRepository {
 	@PersistenceContext(unitName = "primary")
 	private EntityManager manager;
@@ -39,7 +41,7 @@ public class TraineeDBRepository implements TraineeRepository {
 		
 		Trainee trainee1  = util.getObjectForJson(trainee, Trainee.class);
 		manager.persist(trainee1);
-		return "Trainee created";
+		return Constants.ACCOUNTCREATED;
 	}
 	
 	@Transactional(TxType.REQUIRED)
@@ -48,7 +50,7 @@ public class TraineeDBRepository implements TraineeRepository {
 		if(traineeInDB != null) {
 			manager.remove(traineeInDB);
 		}
-	 return "Trainee Deleted";
+	 return Constants.ACCOUNTDELETED;
 	}
 	
 	@Transactional(TxType.REQUIRED)
@@ -61,7 +63,7 @@ public class TraineeDBRepository implements TraineeRepository {
 			manager.merge(traineeFromDB);
 		}
 	
-		return "Trainee Updated";
+		return Constants.ACCOUNTUPDATED;
 	}
 	
 	public void setManager(EntityManager manager) {
