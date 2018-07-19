@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Size;
+
 
 @Entity
 public class Subjects {
@@ -15,11 +15,10 @@ public class Subjects {
 	@Id
 	private Long id;
 	private String subjectName;
-	@Size(min = 1, max = 5)
-	private int subjectRating; 
+	private Long subjectRating; 
 	
 	
-	public Subjects(Long id, String subjectName, int subjectRating) {
+	public Subjects(Long id, String subjectName, Long subjectRating) {
 		this.id = id;
 		this.subjectName = subjectName;
 		this.subjectRating = subjectRating;
@@ -40,10 +39,10 @@ public class Subjects {
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
-	public int getSubjectRating() {
+	public Long getSubjectRating() {
 		return subjectRating;
 	}
-	public void setSubjectRating(int subjectRating) {
+	public void setSubjectRating(Long subjectRating) {
 		this.subjectRating = subjectRating;
 	}
 
