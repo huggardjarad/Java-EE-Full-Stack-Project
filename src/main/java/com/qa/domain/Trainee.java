@@ -32,9 +32,10 @@ public class Trainee {
 	public Trainee() {
 		
 	}
-	public Trainee(String name) {
+	public Trainee(String name, List<Subjects> subjects) {
 		this.name = name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
