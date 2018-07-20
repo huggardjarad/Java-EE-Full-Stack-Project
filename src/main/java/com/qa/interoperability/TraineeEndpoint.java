@@ -12,6 +12,7 @@ import javax.ws.rs.Produces;
 import com.qa.business.TraineeService;
 
 
+
 @Path("/trainee")
 public class TraineeEndpoint {
 	
@@ -45,5 +46,8 @@ public class TraineeEndpoint {
 	@Produces({"application/json"})
 	public String deleteTrainee(@PathParam("id") Long id) {
 		return service.deleteTrainee(id);
+	}
+	public void setService(TraineeService service) {
+		this.service = service;
 	}
 }
