@@ -9,13 +9,12 @@ import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
+import com.qa.constants.Constants;
 import com.qa.domain.Trainee;
 
 
 
 import com.qa.utils.*;
-
-import constants.Constants;
 
 public class TraineeDBRepository implements TraineeRepository {
 	@PersistenceContext(unitName = "primary")
